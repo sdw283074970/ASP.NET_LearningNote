@@ -31,7 +31,7 @@ namespace Vidly.Controllers
     
   //对应的我们还需要Movies/Random视图，右键Views文件夹，选择添加->View，在弹出的对话框中，命名Random，并选择布局，这里用Shared下的默认布局
     //_Layout.cshtml，这样我们就在Views文件夹下的Movies文件夹下获得了一个Random.cshtml的视图文件。.cshtml装载的是可被转换为html标准的C#语句，其
-    //原理为使用@{}代码块包裹C#代码，编译器会编译@{}代码块中的C#代码并将其转译为html标准语言。Random.cshtml代码如下：
+    //原理为使用@{}代码块包裹C#代码，编译器会编译@{}代码块中的C#代码并将其转译为html标准语言(猜想，未证实)。Random.cshtml代码如下：
 
 @Model Vidly.Models.Movie   //指定Model需要引用的命名空间
 @{

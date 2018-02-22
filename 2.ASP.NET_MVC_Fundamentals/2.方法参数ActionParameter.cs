@@ -49,7 +49,7 @@
             return RedirectToAction("Index", "Home", new { page = pageIndex, sortBy = sortBy });    //重定向于主页
         }
 
-  //我们可以通过ULR传递参数，但需要提前重新设置RounteConfig，好让路由认出ULR的模式，具体操作下节介绍，这里使用ULR不传递参数，即直接发送一个
+  //我们可以通过ULR传递参数，但需要一个自定义的MapRoute，好让路由认出ULR的模式，具体操作下节介绍，这里使用ULR不传递参数，即直接发送一个
     //http请求/movies/Index，我们可看到重定向后的地址为50664/?page=1&sortBy=Name。
   //我们也可以通过查询字符串来传递参数。如发送一个http请求/movies/index?sortby=WTF，可以看到重定向后的地址为50664/?page=1&sortBy=WTF，我们没有
     //指定pageIndex所以其默认为1.

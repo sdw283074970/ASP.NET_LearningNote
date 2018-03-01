@@ -1,4 +1,4 @@
-//以下内容与MicrosoftSQLServer_EntityFramework内容相同
+//本章内容与MicrosoftSQLServer_EntityFramework内容大量相似，后者更细节
 
 //Q: 什么是EntityFramework？
 //A: EF(EntityFramework)是一种关系型对象映射解决方案(Objeat-Relational Mapper)。如果应用程序需要访问数据库，因为应用程序使用的语言(如C#)与数据库语

@@ -82,7 +82,7 @@ namespace Vidly.Models
                 .PrimaryKey(t => t.Id);
 
 //Q: 现在并没有设置数据库connectionString，在哪里生成数据库文件？迁移同步会通向哪里？
-//A: 可以直接通过update-database生成本地数据库文件而不用建立Microsoft Sever。生成成功后，可在App_Data文件夹中找到扩展名为.mdf的数据库文件，
+//A: 可以直接通过update-database生成本地数据库文件而不用建立Microsoft Sever。生成成功后，可在App_Data文件夹中找到扩展名为.mdf的数据库镜像文件，
   //前提条件是要显示所有文件，该数据库文件默认为隐藏。双击就可以打开数据库浏览器。
 
 //最后更新2018/03/01

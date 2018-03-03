@@ -57,6 +57,7 @@ namespace Vidly.Models.EntityTypeConfiguration
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new MemberShipTypeConfigurationl());    //调用MemberShipType类的覆写配置
+            base.OnModelCreating(modelBuilder); 
         }
 
 //暂时想到这么多，最后更新2018/03/02

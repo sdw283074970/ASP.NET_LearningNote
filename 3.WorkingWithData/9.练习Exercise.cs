@@ -42,7 +42,6 @@ namespace Vidly.Controllers
 
 //Views/Movies/Details电影详细页面视图代码如下：
 
-
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";

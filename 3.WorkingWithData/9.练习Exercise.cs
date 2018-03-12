@@ -40,6 +40,41 @@ namespace Vidly.Controllers
     }
 }
 
+//Views/Movies/RandomMovies电影页面视图代码如下：
+
+@model Vidly.ViewModels.RandomMovieViewModel
+@{
+    ViewBag.Title = "RandomMovie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{ 
+    var className = Model.Customers.Count > 5 ? "Popular" : null;
+}
+
+<h2 class="@className">Movies</h2>
+<div>
+    <div>
+        <ul>
+            <li>Availbale Movies</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>Id</li>
+            <li>Name</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            @foreach (var c in Model.Movies)
+            {
+                <li>@c.Id</li>
+                <li>@Html.ActionLink(c.Name, "Details", "Movies", new { id = c.Id}, null)</li>      //主要添加超级连接
+            }
+        </ul>
+    </div>
+</div>
+
 //Views/Movies/Details电影详细页面视图代码如下：
 
 @{

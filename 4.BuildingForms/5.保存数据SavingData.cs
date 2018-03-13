@@ -5,8 +5,8 @@
         [HttpPost]
         public ActionResult Creat(NewCustomerViewModel viewModel)
         {
-            _context.Customers.Add(viewModel.Customer);   //试用Add()方法将ModelBinding保存的递数据添加到数据库中
-            _context.SaveChanges();   //保存
+            _context.Customers.Add(viewModel.Customer);   //试用Add()方法将ModelBinding保存的递数据添加到数据库中，此时数据仅存在内存中
+            _context.SaveChanges();   //将内存中的数据保存至数据库中
             return RedirectToAction("Index", "Customers");    //重导向
         }
 

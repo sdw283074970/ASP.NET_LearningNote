@@ -48,5 +48,14 @@ namespace Vidly.Models
 }
 
   //总之，使用第二种重载时，如果通过逻辑验证，则返回ValidationResult.Success，否则，返回一个ValidationResult新实例，并附上错误信息。
+  //最后在CustomerForm视图中添加html辅助函数声明对生日的验证即可
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.Birthday)
+        @Html.TextBoxFor(m => m.Customer.Birthday, "{0:d MMM yyyy}",new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.Birthday)
+    </div>  
   
+  //Html.ValidationMessageFor(m => m.Customer.Birthday)会自己找上Customer.Birthday的特性注解，并执行其中的验证逻辑。
+
 //暂时想到这么多，最后更新2018/03/18

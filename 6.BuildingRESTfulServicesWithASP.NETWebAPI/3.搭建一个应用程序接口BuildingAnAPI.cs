@@ -28,9 +28,9 @@ namespace Vidly.Controllers.Api
     {
         private ApplicationDbContext _context;    //定义数据库字段
 
-        public CustomersController(ApplicationDbContext context)    //通过构造器注入数据库实例
+        public CustomersController()    //通过构造器注入数据库实例
         {
-            _context = context;
+            _context = new ApplicationDbContext();
         }
 
         // GET /api/customers 获取Customers资源列表的粗数据

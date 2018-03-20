@@ -100,5 +100,7 @@ namespace Vidly.Controllers.Api
     }
 }
 
+  //至此，一个满足需求的API搭建完成。
+
 //暂时想到这么多，最后更新2018/03/20
 

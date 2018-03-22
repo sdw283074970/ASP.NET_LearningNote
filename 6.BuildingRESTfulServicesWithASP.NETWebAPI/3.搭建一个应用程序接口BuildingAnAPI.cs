@@ -51,7 +51,7 @@ namespace Vidly.Controllers.Api
 
         // POST /api/customers 新建一个Customer资源
         [HttpPost]  //保证只有HttpPost请求能访问这个方法
-        //约定为，当新建一个资源，则将这个新资源返回给客户端。因为这个资源可能会携带服务器生成的Id
+        //默认约定为，当新建一个资源，则将这个新资源返回给客户端，因为这个资源可能会携带服务器生成的Id
         public Customer CreateCustomer(Customer customer)   //签名中的customer为请求发送者，ASP.NET会自动将其初始化
         {
             if (!ModelState.IsValid)    //首先验证模型状态，如果存在验证失败的情况，则抛出BadRequest异常

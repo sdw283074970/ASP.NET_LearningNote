@@ -54,7 +54,7 @@ namespace Vidly.App_Start
         // GET /api/customers
         public IEnumerable<CustomerDto> GetCustomers()    //通信方向为从服务端到用户端，所以将返回类型改为IEnumerable<CustomerDto>
         {
-            //_context.Customers.ToList()返回的是IEnumerable<Customer>，如果要返回CustomerDto就需要转换
+            //_context.Customers.ToList()方法返回的是IEnumerable<Customer>，//如果要返回CustomerDto就需要转换
             return _context.Customers.ToList().Select(Mapper.Map<Customer, CustomerDto>);   //使用Select()方法返回CustomerDto
         }
 

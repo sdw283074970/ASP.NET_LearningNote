@@ -58,7 +58,8 @@ namespace Vidly.Controllers.Api
 
             customerDto.Id = customer.Id;
 
-            //Created()方法第一个参数为Uri，即Unified Resource Identifier，
+            //Created()方法第一个参数为Uri(Unified Resource Identifier)，即当前的请求地址+新建的对象的Id，这样状态一栏才会是Created
+            //第二个参数就为原本要返回的对象，这里即是customerDto
             return Created(new Uri(Request.RequestUri + "/" + customer.Id), customerDto);
         }
 
@@ -95,3 +96,20 @@ namespace Vidly.Controllers.Api
     }
 }
 
+  //需要注意的是，在此例中我们需要将CustomerDto类做一些修改，即将Birthday字段的自定义验证条件删除，该自定义验证的代码如下：
+  
+    public class Min18YearsIfAMember : ValidationAttribute
+    {
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            //这里是将挂载的对象实例转换为Customer，但实际挂载对象是CustomerDto，者两个类只有连接关系没有继承关系，继续挂载会抛出异常
+            var customer = (Customer)validationContext.ObjectInstance;    
+            //...余下代码省略
+        }
+    }
+    
+  //理想情况下我们应该只有一种方法去新建一个Customer实例，但是目前有两个通往前端的点。一个是API，一个是返回Razor视图的正常的MVC动作。通常情况下只用
+    //其中的一个End-point。只使用API的项目被称为纯后端项目，使用Razor视图和正常MVC动作(Action)的被称为全端(Full Stack)项目。如果想将这个项目转成
+    //纯后端项目，则需要弃用所有的正常的Action，然后更改视图来发布API。目前情况，只用将CustomerDto中的自定义验证特性删除就行了。
+
+//暂时想到这么多，最后更新2018/03/21

@@ -83,33 +83,17 @@
 //一个典型的带层次结构的Json数据如下：
 
 [
-   	{
-        "nick_name": "TEST2",
-        "localized_name": "Anti-Mage",
-        "url_full_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_full.png",
-        "name": "npc_dota_hero_antimage",
-        "url_small_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_sb.png",
-        "url_large_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_lg.png",
-        "url_vertical_portrait": "http://cdn.dota2.com/apps/dota2/images/heroes/antimage_vert.jpg",
-        "position": "12",
-        "heroRolesDto": [
-            {
-                "id": 1,
-                "name": "Carry",
-                "heroes"
-            },
-            {
-            	"id": 2,
-            	"name": "Mid"
-            }
-        ],	
-        "id": 1
-    }	
+    {
+        "name": "大怪兽",
+        "isSubscribedToNewsLetter": false,
+        "memberShipTypeId": 2,
+        "memberShipType": {
+        	"id": 2,
+            "name": "Monthly"
+        },
+        "birthday": "1992-11-17T00:00:00"
+    }
 ]
 
-//这个Json数组中只有一个元素，但是这个元素中还有另一个数组。
+//这个Json数组中只有一个元素，但是这个元素中还有另一个元素。
 
-  
-  
-  
-  

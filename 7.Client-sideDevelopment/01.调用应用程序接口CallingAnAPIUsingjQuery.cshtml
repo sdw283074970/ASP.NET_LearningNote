@@ -139,7 +139,7 @@ $("p").click(function(){
                         url: "/api/customers/" + button.attr("data-customer-id"),   //使用url定义，并声明其值，即DELETE请求的url
                         method: "DELETE",   //声明通过这个url执行的是RESTful应用程序接口中的DELETE方法
                         success: function () {    //声明如果请求成功则执行一个函数
-                            button.parents("tr").remove();    //选择当前button的母体<tr>元素并yi'chu
+                            button.parents("tr").remove();    //选择当前button的母体<tr>元素并移除
                         }
                     })
                 }
@@ -148,3 +148,4 @@ $("p").click(function(){
     </script>
 }
       
+//暂时想到这么多，最后更新2018/03/30

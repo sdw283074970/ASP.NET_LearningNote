@@ -1,0 +1,79 @@
+//Q: 如何用jQuery调用API？
+//A: 首先jQuery基础语法了解一下：
+
+  //jQuery 语法是通过选取 HTML 元素，并对选取的元素执行某些操作。
+  //基础语法： $(selector).action()
+  //美元符号$定义 jQuery
+  //选择符（selector）"查询"和"查找" HTML 元素
+  //jQuery 的 action() 执行对元素的操作
+  
+  //如以下实例：
+  
+$(this).hide() - 隐藏当前元素
+$("p").hide() - 隐藏所有 <p> 元素
+$("p.test").hide() - 隐藏所有 class="test" 的 <p> 元素
+$("#test").hide() - 隐藏所有 id="test" 的元素
+  
+  //特别说明，可以发现绝大部分的jQuery都是以一个document ready函数开始的，这个函数如下：
+  
+$(document).ready(function(){
+ 
+   // 开始写 jQuery 代码...
+ 
+});
+
+  //这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码，即在 DOM 加载完成后才可以对 DOM 进行操作。简写语法如下：
+  
+$(function(){
+ 
+   // 开始写 jQuery 代码...
+ 
+});
+
+  //选一个顺手的用就行。
+  
+//Q: 如何选取元素？
+//A: 使用类似于CSS的元素选择器。如：
+  
+  //元素选择器：$("p")，在页面中选取所有 <p> 元素
+  //#id选择器: $("#test")，在页面中选择id="test"的元素
+  //.class选择器: $(".test")，在页面中选择class="test"的元素
+  //更多实例：http://www.runoob.com/jquery/jquery-selectors.html
+  
+//Q: jQuery函数应该写在哪里？
+//A: 写在<script></script>标签中。可以直接写，也可以通过<script>标签的scr属性引用，如：
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>题目</title> 
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">    //在这里引用.js的脚本
+</script>
+<script>
+//直接写jQuery
+$(document).ready(function(){
+  $("button").click(function(){
+    $(".test").hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<h2 class="test">这是一个标题</h2>
+<p class="test">这是一个段落。</p>
+<p>这是另外一个段落。</p>
+<button>点我</button>
+</body>
+</html>
+
+//Q: 为什么要用jQuery？
+//A: jQuery 是为事件处理特别设计的。如：
+
+$("p").click(function(){
+    // 点击<p>元素后触发执行代码
+});
+
+
+  

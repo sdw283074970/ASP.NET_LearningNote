@@ -56,3 +56,5 @@ namespace HeroPickHelper
         });
     </script>
 }
+
+//暂时想到这么多，最后更新2018/04/01

@@ -11,7 +11,7 @@
 //Q: 如何使用AutoMapper关联领域模型类和DTO？
 //A: 以Vidly为例，使用AutoMapper关联领域模型Customer和CustomerDto，需要跟随以下步骤：
   //1.首先需要在项目中安装AutoMapper。打开PackageManager，输入install-package automapper -version:4.1 即可安装4.1版本；
-    //(需要注意的是4.2版本之后AutoMapper的使用方法变化很大，详见https://bit.ly/2qu8O4B)；
+    //(2018.04.12更新:需要注意的是4.2版本之后AutoMapper的使用方法变化很大，详见https://bit.ly/2qu8O4B)；
   //2.然后在App_Star文件夹下建立一个叫MappingProfile的类，这个类的代码如下：
 
 using AutoMapper;
